@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shergilldesign/static/css/main.d6446815.chunk.css",
-    "main.js": "/shergilldesign/static/js/main.449b0579.chunk.js",
-    "main.js.map": "/shergilldesign/static/js/main.449b0579.chunk.js.map",
+    "main.css": "/shergilldesign/static/css/main.f79f216a.chunk.css",
+    "main.js": "/shergilldesign/static/js/main.84e8e300.chunk.js",
+    "main.js.map": "/shergilldesign/static/js/main.84e8e300.chunk.js.map",
     "runtime-main.js": "/shergilldesign/static/js/runtime-main.815bfddf.js",
     "runtime-main.js.map": "/shergilldesign/static/js/runtime-main.815bfddf.js.map",
     "static/js/2.a7c3e060.chunk.js": "/shergilldesign/static/js/2.a7c3e060.chunk.js",
     "static/js/2.a7c3e060.chunk.js.map": "/shergilldesign/static/js/2.a7c3e060.chunk.js.map",
     "index.html": "/shergilldesign/index.html",
-    "precache-manifest.2f9aee6298e330747cabca56b46f4a16.js": "/shergilldesign/precache-manifest.2f9aee6298e330747cabca56b46f4a16.js",
+    "precache-manifest.3bc52313eeaecd234c953cca254b4ba4.js": "/shergilldesign/precache-manifest.3bc52313eeaecd234c953cca254b4ba4.js",
     "service-worker.js": "/shergilldesign/service-worker.js",
-    "static/css/main.d6446815.chunk.css.map": "/shergilldesign/static/css/main.d6446815.chunk.css.map",
+    "static/css/main.f79f216a.chunk.css.map": "/shergilldesign/static/css/main.f79f216a.chunk.css.map",
     "static/js/2.a7c3e060.chunk.js.LICENSE.txt": "/shergilldesign/static/js/2.a7c3e060.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/shergilldesign/static/media/logo.94753d97.png",
     "static/media/photo_1.jpg": "/shergilldesign/static/media/photo_1.e3156131.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.815bfddf.js",
     "static/js/2.a7c3e060.chunk.js",
-    "static/css/main.d6446815.chunk.css",
-    "static/js/main.449b0579.chunk.js"
+    "static/css/main.f79f216a.chunk.css",
+    "static/js/main.84e8e300.chunk.js"
   ]
 }
