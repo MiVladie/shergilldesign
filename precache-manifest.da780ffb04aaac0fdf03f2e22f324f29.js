@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65715082057cd1bc059657d62398c269",
+    "revision": "4508575a3b45f59caeb71a166ab9c353",
     "url": "/shergilldesign/index.html"
   },
   {
-    "revision": "efbc0415af3efed657eb",
+    "revision": "1f665e5269f67fcd7a12",
     "url": "/shergilldesign/static/css/main.f79f216a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shergilldesign/static/js/2.bcb7100b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "efbc0415af3efed657eb",
-    "url": "/shergilldesign/static/js/main.9d0c0f5f.chunk.js"
+    "revision": "1f665e5269f67fcd7a12",
+    "url": "/shergilldesign/static/js/main.9079e79d.chunk.js"
   },
   {
     "revision": "e7152f03bcb2a91d0bee",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/shergilldesign/static/css/main.f79f216a.chunk.css",
-    "main.js": "/shergilldesign/static/js/main.9d0c0f5f.chunk.js",
-    "main.js.map": "/shergilldesign/static/js/main.9d0c0f5f.chunk.js.map",
+    "main.js": "/shergilldesign/static/js/main.9079e79d.chunk.js",
+    "main.js.map": "/shergilldesign/static/js/main.9079e79d.chunk.js.map",
     "runtime-main.js": "/shergilldesign/static/js/runtime-main.815bfddf.js",
     "runtime-main.js.map": "/shergilldesign/static/js/runtime-main.815bfddf.js.map",
     "static/js/2.bcb7100b.chunk.js": "/shergilldesign/static/js/2.bcb7100b.chunk.js",
     "static/js/2.bcb7100b.chunk.js.map": "/shergilldesign/static/js/2.bcb7100b.chunk.js.map",
     "index.html": "/shergilldesign/index.html",
-    "precache-manifest.6138b765f73470c177f0d7045eb9c9f9.js": "/shergilldesign/precache-manifest.6138b765f73470c177f0d7045eb9c9f9.js",
+    "precache-manifest.da780ffb04aaac0fdf03f2e22f324f29.js": "/shergilldesign/precache-manifest.da780ffb04aaac0fdf03f2e22f324f29.js",
     "service-worker.js": "/shergilldesign/service-worker.js",
     "static/css/main.f79f216a.chunk.css.map": "/shergilldesign/static/css/main.f79f216a.chunk.css.map",
     "static/js/2.bcb7100b.chunk.js.LICENSE.txt": "/shergilldesign/static/js/2.bcb7100b.chunk.js.LICENSE.txt",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.815bfddf.js",
     "static/js/2.bcb7100b.chunk.js",
     "static/css/main.f79f216a.chunk.css",
-    "static/js/main.9d0c0f5f.chunk.js"
+    "static/js/main.9079e79d.chunk.js"
   ]
 }
