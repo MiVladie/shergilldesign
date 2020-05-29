@@ -1,0 +1,126 @@
+$black: #2E2E2E;
+
+.Message {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+    .Image {
+        display: none;
+    }
+
+    .Container {
+        width: 100%;
+
+        padding: 2em 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: white;
+
+        .Wrapper {
+            width: 96vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+
+            text-align: center;
+
+            .Main {
+                font-family: 'Poppins', sans-serif;               
+                font-size: 2em;
+                font-weight: 500;
+
+                text-transform: uppercase;
+
+                color: $black;
+            }
+
+            .Line {
+                margin: 1.25em 0 1.5em;
+    
+                width: 3em;
+                height: 2px;
+
+                background-color: $black;
+            }
+
+            .Description {
+                font-family: 'Poppins', sans-serif;
+
+                line-height: 1.5em;
+
+                color: $black;
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) {
+    .Message {
+        .Container {
+            .Wrapper {
+                width: 70%;
+
+                .Form {
+                    .Send {
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .Message {
+        flex-flow: row;
+        justify-content: center;
+
+        .Image {
+            width: 50%;
+            height: auto;
+            
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .Container {
+            width: 50%;
+
+            justify-content: left;
+
+            .Wrapper {
+                width: 80%;
+                margin-left: 2em;
+                
+                align-items: flex-start;
+
+                text-align: left;
+
+                .Form {
+                    margin: 1em 0;
+
+                    .Send {
+                        margin-top: 1.5em;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }    
+}

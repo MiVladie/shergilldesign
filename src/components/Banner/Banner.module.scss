@@ -1,0 +1,177 @@
+$blue: #002BD1;
+
+.Banner {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-flow: column;
+
+    position: relative;
+    
+    .Background {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            filter: brightness(0.7);
+        }
+    }
+
+    .Promo {
+        width: 85%;
+
+        position: relative;
+        text-align: center;
+
+        color: white;
+
+        .Meta {
+            font-size: 1.5em;
+        }
+        
+        .Main {
+            font-size: 3.75em;
+            font-weight: 600;
+            line-height: 1.15em;
+
+            margin: 0.25em 0;
+
+            text-transform: uppercase;
+        }
+
+        .Description {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+    }
+
+    .Extra {
+        width: 100%;
+        margin: 0 auto;
+
+        position: absolute;
+        bottom: 0;
+
+        .Request {
+            display: none;
+        }
+
+        .Scroll {
+            display: block;
+            margin: 0 auto 0.75em;
+
+            background: none;
+            border: none;
+            
+            width: 2.5em;
+            height: 2em;
+
+            background-image: url('../../assets/icons/scroll.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+@media (min-width: 720px) {
+    .Banner {        
+        .Promo {
+            width: 80%;
+            max-width: calc(850px * 0.8);
+
+            .Meta {
+                font-size: 2em;
+            }
+            
+            .Main {
+                font-size: 4em;
+                font-weight: 600;
+
+                margin: 0.4em 0;
+            }
+
+            .Description {
+                font-size: 1em;
+            }
+        }
+
+        .Extra {
+            .Request {
+                display: block;
+
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+                margin-right: 5vw;
+                padding: 0.75em 1.25em;
+
+                border: none;
+                background-color: $blue;
+
+                font-size: 0.9em;
+                font-weight: 500;
+                color: white;
+                
+                text-transform: uppercase;
+                text-decoration: none;
+
+                transition: all 0.15s;
+
+                &:hover {
+                    background-color: darken($blue, 5);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .Banner {
+        align-items: flex-start;
+
+        .Promo {
+            margin-left: 2.5em;
+            text-align: left;
+            max-width: none;
+
+            .Meta {
+                font-size: 2.25em;
+            }
+
+            .Main {
+                font-size: 5em;
+                margin: 0.1em 0 0.2em;
+            }
+
+            .Description {
+                font-size: 1.15em;
+                width: 70%;
+            }
+        }
+
+        .Extra {
+            width: 100%;
+
+            .Request {
+            }
+        }
+    }
+}

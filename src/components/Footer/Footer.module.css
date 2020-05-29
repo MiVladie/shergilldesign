@@ -1,0 +1,159 @@
+.Footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 0.5em 0;
+  background-color: #111111;
+}
+
+.Footer .Main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 90%;
+}
+
+.Footer .Main .About, .Footer .Main .Links, .Footer .Main .Question {
+  width: 100%;
+}
+
+.Footer .Main .About .Name, .Footer .Main .Links .Name, .Footer .Main .Question .Name {
+  font-size: 2em;
+  color: white;
+  margin-top: 1.5em;
+}
+
+.Footer .Main .About .Line, .Footer .Main .Links .Line, .Footer .Main .Question .Line {
+  width: 4em;
+  height: 1.5px;
+  margin: 2em 0;
+  background-color: white;
+}
+
+.Footer .Main .About .Description {
+  font-size: 1.1em;
+  line-height: 1.75em;
+  color: white;
+  margin-bottom: 1.5em;
+}
+
+.Footer .Main .Links {
+  display: none;
+}
+
+.Footer .Main .Links .Pages {
+  list-style-type: none;
+}
+
+.Footer .Main .Links .Pages .Page {
+  margin-bottom: 1.5em;
+}
+
+.Footer .Main .Links .Pages .Page a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.Footer .Main .Links .Pages .Page a:hover {
+  color: #002BD1;
+}
+
+.Footer .Main .Question .Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.Footer .Main .Question .Info .Icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.Footer .Main .Question .Info .Text {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  color: white;
+}
+
+.Footer .Extra {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.35em;
+  color: white;
+  max-width: 65%;
+}
+
+.Footer .Extra a {
+  color: white;
+}
+
+@media (min-width: 720px) {
+  .Footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 0.7em;
+  }
+  .Footer .Main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Footer .Main .About, .Footer .Main .Links, .Footer .Main .Question {
+    width: auto;
+    max-width: 30%;
+  }
+  .Footer .Main .Links {
+    display: block;
+  }
+  .Footer .Extra:first-of-type {
+    margin-top: 2em;
+  }
+  .Footer .Extra:last-of-type {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Footer {
+    font-size: 0.85em;
+  }
+  .Footer .Main {
+    width: 80%;
+  }
+  .Footer .Main .About, .Footer .Main .Links, .Footer .Main .Question {
+    width: auto;
+    max-width: 30%;
+  }
+  .Footer .Main .About .Line, .Footer .Main .Links .Line, .Footer .Main .Question .Line {
+    margin: 2.5em 0 3em;
+  }
+}
+/*# sourceMappingURL=Footer.module.css.map */

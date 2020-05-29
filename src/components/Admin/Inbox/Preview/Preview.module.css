@@ -1,0 +1,128 @@
+.Preview {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.Preview .Meta {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.Preview .Meta .Description {
+  width: 50%;
+  font-size: 1.5em;
+  color: #2E2E2E;
+}
+
+.Preview .Meta .Description:nth-child(2n) {
+  display: none;
+}
+
+.Preview .Message {
+  width: 100%;
+  height: 3em;
+  margin-bottom: 0.75em;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.Preview .Message:nth-child(2n) {
+  background-color: #F2F2F2;
+}
+
+.Preview .Message:hover {
+  background-color: #ebebeb;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.Preview .Message .Info {
+  width: 50%;
+}
+
+.Preview .Message .Info:nth-child(1) .Text {
+  border: none;
+}
+
+.Preview .Message .Info .Text {
+  font-weight: 300;
+  font-size: 1.125em;
+  text-overflow: ellipsis;
+  color: #2E2E2E;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+  padding: 0.5em 0 0.5em 0.75em;
+  border-left: 0.5px solid rgba(0, 0, 0, 0.25);
+}
+
+.Preview .Message .Info:nth-child(2n) {
+  display: none;
+}
+
+.Preview .Total {
+  font-size: 1.25em;
+  color: #2E2E2E;
+  margin-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 720px) {
+  .Preview {
+    width: 75%;
+  }
+  .Preview .Meta .Description {
+    width: 33%;
+  }
+  .Preview .Meta .Description:nth-child(4) {
+    display: block;
+  }
+  .Preview .Message .Info {
+    width: 33%;
+  }
+  .Preview .Message .Info:nth-child(4) {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Preview {
+    width: 75%;
+  }
+  .Preview .Meta .Description {
+    width: 25%;
+  }
+  .Preview .Meta .Description:nth-child(2) {
+    display: block;
+  }
+  .Preview .Message {
+    height: 4em;
+  }
+  .Preview .Message .Info {
+    width: 25%;
+  }
+  .Preview .Message .Info:nth-child(2) {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Preview.module.css.map */

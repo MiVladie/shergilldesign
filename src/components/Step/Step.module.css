@@ -1,0 +1,170 @@
+.Step {
+  width: 100%;
+}
+
+.Step .Text {
+  width: 90%;
+  margin: 0 0 1em 1em;
+  padding: 2em 0 0.5em;
+}
+
+.Step .Text .Line {
+  margin: 1.25em 0 1.5em;
+  width: 3em;
+  height: 2px;
+  background-color: #2E2E2E;
+}
+
+.Step .Text .Meta {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.Step .Text .Main {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0.25em 0;
+  text-transform: uppercase;
+}
+
+.Step .Text .Description {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.Step .Text .Link {
+  display: block;
+  margin: 1em 0 0;
+  width: 9em;
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8em;
+  color: #2E2E2E;
+  text-decoration: none;
+  border: 1.5px solid #2E2E2E;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.Step .Text .Link:hover {
+  background-color: #2E2E2E;
+  color: white;
+}
+
+.Step .Images {
+  width: 100%;
+  height: 35vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.Step .Images .Image {
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 720px) {
+  .Step {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    position: relative;
+  }
+  .Step .Text, .Step .Images {
+    width: 50%;
+    min-height: 27vh;
+  }
+  .Step .Images {
+    width: 50%;
+    height: auto;
+  }
+  .Step .Text {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .Step .Text .Line {
+    margin: 0.5em 0 2em 1.25em;
+  }
+  .Step .Text .Meta, .Step .Text .Main, .Step .Text .Description {
+    width: 85%;
+    padding-left: 1.75rem;
+  }
+  .Step .Text .Meta {
+    margin-top: 1.5em;
+  }
+  .Step .Text .Description {
+    margin-bottom: 2em;
+  }
+  .Step .Text .Link {
+    margin: 1.5em 0 1.5em 1.25rem;
+  }
+  .Step .Images {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .Step .Text, .Step .Images {
+    min-height: 57vh;
+  }
+  .Step .Text {
+    padding: 1em 0;
+  }
+  .Step .Text .Line {
+    margin: 0.5em 0 2em 2rem;
+  }
+  .Step .Text .Intro, .Step .Text .Main, .Step .Text .Description {
+    width: 75%;
+    padding-left: 2rem;
+  }
+  .Step .Text .Main {
+    margin-left: -5px;
+  }
+  .Step .Text .Description {
+    min-height: 15vh;
+    line-height: 1.35em;
+    padding-bottom: 4em;
+  }
+  .Step .Text .Link {
+    margin-left: 2rem;
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=Step.module.css.map */
