@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Input from '../Form/Input/Input';
+import Input from '../UI/Input/Input';
 import Spinner from '../UI/Spinner/Spinner';
 
 import { isFormValid } from '../../util/formValidation';
