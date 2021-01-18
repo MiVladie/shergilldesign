@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import classes from './Promotion.module.css';
+import classes from './Promotion.module.scss';
 
 import template_02 from '../../assets/images/template_02.jpg';
 

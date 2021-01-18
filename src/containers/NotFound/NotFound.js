@@ -8,11 +8,10 @@ const notFound = () => {
     return (
     	<React.Fragment>            
             <Banner 
+                image = { bannerImage }
                 meta = 'Not found!' 
                 main = 'Page Not Found' 
-                description = 'The page you are looking for does not exist or an other error occured! Go back, or head over to shergilldesign.co.uk to choose a new direction.'
-                background = { bannerImage }
-                hideScroll />
+                description = 'The page you are looking for does not exist or an other error occured! Go back, or head over to shergilldesign.co.uk to choose a new direction.' />
 
     	</React.Fragment>
     );

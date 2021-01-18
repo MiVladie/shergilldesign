@@ -1,12 +1,15 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { PureComponent } from "react";
+import { withRouter } from "react-router-dom";
 
-export default function ScrollToTop() {
-  const { pathname } = useLocation();
+class ScrollIntoView extends PureComponent {
+  componentDidMount = () => window.scrollTo(0, 0);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  componentDidUpdate = prevProps => {
+    if (this.props.location !== prevProps.location) 
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  };
 
-  return null;
+  render = () => this.props.children;
 }
+
+export default withRouter(ScrollIntoView);

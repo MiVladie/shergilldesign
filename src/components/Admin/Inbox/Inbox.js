@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import Intro from '../../Intro/Intro';
+import Introduction from '../../Introduction/Introduction';
 import Preview from './Preview/Preview';
 import Message from './Message/Message';
 import Spinner from '../../UI/Spinner/Spinner';
@@ -55,7 +55,7 @@ const Inbox = () => {
 
     return (
     	<React.Fragment>
-        <Intro main = 'Incoming messages' />
+        <Introduction main = 'Incoming messages' />
 
         { 
           loading 

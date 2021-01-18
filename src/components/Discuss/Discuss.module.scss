@@ -2,12 +2,10 @@ $black: #151515;
 $red: #FF5959;
 
 .Discuss {
+    // Non-Styling
+
     width: 100%;
     
-    background-color: #F2F2F2;
-
-    padding: 2em 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,41 +13,46 @@ $red: #FF5959;
     flex-flow: column;
 
     .Meta, .Main {
+        color: $black;
+
+        // Non-Styling
+
         width: 85%;
         text-align: center; 
-        color: $black;
     }
 
     .Meta {
         font-size: 1.5em;
         font-weight: 500;
 
-        text-transform: uppercase;
+        // Non-Styling
 
         margin-bottom: 0.75em;
+        text-transform: uppercase;
     }
 
     .Main {
         font-size: 1em;
         line-height: 1.2em;
+        
+        // Non-Styling
 
-        margin: 0.5em 0 1.25em;
+        margin-bottom: 1.5em;
     }
 
-    .Button {
-        padding: 1.15em 2.15em;
-
-        background-color: $red;
-        border-radius: 2px;
-
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.85em;
-        font-weight: 500;
-
-        text-transform: uppercase;
-        text-decoration: none;
+    .Link {
+        width: 10em;
+        line-height: 3.25em;
 
         color: white;
+        background-color: $red;
+
+        // Non-Styling
+
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
 
         transition: all 0.15s;
 
@@ -61,27 +64,16 @@ $red: #FF5959;
 
 @media(min-width: 720px) {
     .Discuss {
-        font-size: 1.2em;
-        padding: 2em 0;
-
         .Main {
             width: 75%;
-            margin-bottom: 1em;
         }
     }
 }
 
 @media(min-width: 1025px) {
     .Discuss {
-        padding: 3.5em 0;
-
         .Meta {
-            font-size: 2.2em;
-            margin-bottom: 0.8em;
-        }
-
-        .Main {
-            margin-bottom: 1.5em;            
+            font-size: 2em;
         }
     }
 }

@@ -4,17 +4,14 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../assets/icons/logo.png';
 
-import classes from './Navigation.module.css';
+import classes from './Navigation.module.scss';
 
-const Navigation = () => {
+const Navigation = () => {    
     const [scrolled, setScrolled] = useState(false);
 
     const [expand, setExpand] = useState(false);
 
     useEffect(() => {
-        if(expand && window.screen.width >= 1025)
-            setExpand(false);
-
         if(!expand) document.body.style.overflow = 'visible';
         else document.body.style.overflow = 'hidden';
     }, [expand]);
@@ -23,7 +20,7 @@ const Navigation = () => {
         event.preventDefault();
 
         setExpand(!expand);
-    }
+    };
     
     window.addEventListener('scroll', () => {
         setScrolled(window.scrollY > 75);  
@@ -31,28 +28,23 @@ const Navigation = () => {
 
     return (
     	<nav className = { [classes.Navigation, scrolled ? classes.Scrolled : '', expand ? classes.Expand : ''].join(' ') }>
-
             <Link className = { classes.Brand } to = '/' onClick = { () => setExpand(false) }>
                 <img className = { classes.Logo } src = { logo } alt = 'Shergill Design' />
             </Link>
 
-            <button className = { classes.Menu } onClick = { (event) => expandMenuHandler(event) } />
+            <button className = { classes.Menu } onClick = { expandMenuHandler } />
 
             <ul className = { classes.Links }>
                 <li className = { classes.Link }>
-                    <Link className = { classes.Text } to = '/about' onClick = { () => setExpand(!expand) }>About</Link>
-                </li>
-                
-                <li className = { classes.Link }>
-                    <Link className = { classes.Text } to = '/process' onClick = { () => setExpand(!expand) }>Process</Link>
+                    <a className = { classes.Text } href = '/#about' onClick = { () => setExpand(false) }>About</a>
                 </li>
 
                 <li className = { classes.Link }>
-                    <Link className = { classes.Text } to = '/services' onClick = { () => setExpand(!expand) }>Services</Link>
+                    <a className = { classes.Text } href = '/#services' onClick = { () => setExpand(false) }>Services</a>
                 </li>                
                 
                 <li className = { classes.Link }>
-                    <Link className = { classes.Text } to = '/contact' onClick = { () => setExpand(!expand) }>Contact</Link>
+                    <a className = { classes.Text } href = '/#contact' onClick = { () => setExpand(false) }>Contact</a>
                 </li>
             </ul>
     	</nav>

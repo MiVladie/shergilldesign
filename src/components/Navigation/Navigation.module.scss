@@ -5,19 +5,15 @@ $black: rgb(17, 17, 17);
     width: 90%;
     height: 5em;
 
-    margin: 0 auto;
-
-    position: fixed;
-    top: calc(2.25em - 1px);
-    left: 0;
-    right: 0;
-    z-index: 100;
+    padding: 0 5%;
+    
+    position: sticky;
+    top: -1px;
+    z-index: 1000;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    z-index: 200;
 
     .Menu {
         width: 3em;
@@ -29,8 +25,9 @@ $black: rgb(17, 17, 17);
     }
 
     .Brand {
-        width: 11em;
+        width: 12em;
 
+        outline: none;
         cursor: pointer;
         
         .Logo {
@@ -63,10 +60,8 @@ $black: rgb(17, 17, 17);
 .Scrolled {
     background-color: $black;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0);
-    padding: 0 5vw;
-    height: 5em;
 
-    animation: appear 0.1s 0s ease forwards;
+    animation: appear 0.2s 0s ease-out forwards;
 }
 
 .Expand {
@@ -166,14 +161,12 @@ $black: rgb(17, 17, 17);
 @keyframes appear {
     from {
         background-color: transparent;
-        box-shadow: 0 0 7px rgba(0, 0, 0, 0);
-        height: 5em;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
 
     to {
         background-color: #151515;
-        box-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
-        height: 4em;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
     }            
 }
 
@@ -186,27 +179,13 @@ $black: rgb(17, 17, 17);
             align-items: center;
         }
     }
-        
-    .Scrolled {
-        height: 7em;
-
-        animation: appear 0.3s 0s ease forwards;
-    }
-
-    @keyframes appear {
-        from {
-            height: 6em;
-        }
-
-        to {
-            height: 4.5em;
-        }            
-    }
 }
 
 @media(min-width: 1025px) {
     .Navigation {
         width: 93%;
+        height: 5.5em;
+        padding: 0 3.5%;
 
         .Menu {
             display: none;
@@ -250,9 +229,5 @@ $black: rgb(17, 17, 17);
                 }
             }
         }       
-    }
-    
-    .Scrolled {
-        padding: 0 calc(3.5%);
     }
 }

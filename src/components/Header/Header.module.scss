@@ -4,12 +4,6 @@ $black: rgb(17, 17, 17);
 .Header {
     width: 100%;
     height: 2.25em;
-    
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    z-index: 150;
 
     background-color: $black;
 
@@ -26,6 +20,8 @@ $black: rgb(17, 17, 17);
 
         .Text {
             display: none;
+
+            outline: none;
         }
 
         .Phone, .Email {
@@ -37,6 +33,8 @@ $black: rgb(17, 17, 17);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+
+            outline: none;
         }
 
         .Phone {
@@ -83,6 +81,8 @@ $black: rgb(17, 17, 17);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            
+            outline: none;
         }
 
         .Line {
@@ -100,11 +100,7 @@ $black: rgb(17, 17, 17);
         
         .Twitter {
             background-image: url('../../assets/icons/twitter.png');
-        }
-        
-        .Instagram {
             margin-right: 5vw;
-            background-image: url('../../assets/icons/instagram.png');
         }
     }
 }
@@ -160,8 +156,8 @@ $black: rgb(17, 17, 17);
         .Social {
             padding-left: 7vw;
 
-            .Instagram {
-                margin-right: 3.5vw;
+            .Twitter {
+                margin-right: 3vw;
             }
         }
     }

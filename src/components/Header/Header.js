@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './Header.module.css';
+import classes from './Header.module.scss';
 
 const header = () => (
     <div className = { classes.Header }>
@@ -16,11 +16,9 @@ const header = () => (
         <div className = { classes.Social }>
             <div className = { classes.Square } />
             
-            <a className = { classes.Facebook } href = 'https://facebook.com/' target = '_blank' rel = 'noopener noreferrer'> </a>
+            <a className = { classes.Facebook } href = 'https://www.facebook.com/Shergill-Design-104287344670159' target = '_blank' rel = 'noopener noreferrer'> </a>
             <div className = { classes.Line } />
-            <a className = { classes.Twitter } href = 'https://twitter.com/' target = '_blank' rel = 'noopener noreferrer'> </a>
-            <div className = { classes.Line } />
-            <a className = { classes.Instagram } href = 'https://instagram.com/' target = '_blank' rel = 'noopener noreferrer'> </a>
+            <a className = { classes.Twitter } href = 'https://twitter.com/shergilldesign' target = '_blank' rel = 'noopener noreferrer'> </a>
         </div>
     </div>
 );

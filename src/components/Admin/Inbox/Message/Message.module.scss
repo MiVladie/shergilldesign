@@ -1,4 +1,5 @@
 $black: #151515;
+$blue: #002BD1;
 $red: #FF2C2C;
 
 .Message {
@@ -21,7 +22,6 @@ $red: #FF2C2C;
             margin-right: 0.25em;
                             
             .Text {
-                font-family: 'Poppins', sans-serif;
                 font-weight: 300;
                 font-size: 0.9em;
 
@@ -46,15 +46,14 @@ $red: #FF2C2C;
         text-decoration: none;
 
         color: $black;
+        background-color: #eee;
 
         margin-bottom: 0.75em;
-    }
+        transition: all 0.25s;
 
-    .Action, .Response {
-        .Button {       
-            &:nth-child(1) {
-                border: 1px solid $black;
-            }
+        &:hover {
+            color: white;
+            background-color: $blue;
         }
     }
 

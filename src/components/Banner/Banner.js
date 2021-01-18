@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import classes from './Banner.module.scss';
 
-import classes from './Banner.module.css';
-
-const banner = ({ meta, main, description, background, hideScroll }) => {
+const banner = ({ image, meta, main, description, linkTo, linkText, scrollTo }) => {
+    const scrollHandler = () => {
+        document.getElementById(scrollTo).scrollIntoView({ behavior: 'smooth' });
+    };
+    
     return (
     	<section className = { classes.Banner }>
     		<div className = { classes.Background }>
-                <img src = { background } alt = 'Architecture Design' />
+                <img src = { image } alt = 'Architecture Design' />
             </div>
 
             <div className = { classes.Promo }>
@@ -18,8 +20,8 @@ const banner = ({ meta, main, description, background, hideScroll }) => {
             </div>
 
             <div className = { classes.Extra }>
-                { !hideScroll && <button className = { classes.Scroll } onClick = { () => document.getElementById('intro').scrollIntoView({ behavior: 'smooth' }) }></button> }
-                <Link className = { classes.Request } to = '/contact'>Request a quote</Link>
+                { scrollTo && <button className = { classes.Scroll } onClick = { scrollHandler }><div className = { classes.Arrow } /></button> }
+                { linkText && <a className = { classes.Request } href = { '#' + linkTo }>{ linkText }</a> }
             </div>
     	</section>
     );

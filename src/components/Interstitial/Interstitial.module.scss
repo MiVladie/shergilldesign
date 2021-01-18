@@ -108,7 +108,7 @@ $mainWidth: 95%;
 }
 
 @media (min-width: 720px) {
-    $leftSpacing: 5%;
+    $leftSpacing: 2em;
     $mainWidth: 80%;
 
     .Interstitial {
@@ -128,7 +128,7 @@ $mainWidth: 95%;
 }
 
 @media (min-width: 1025px) {
-    $leftSpacing: 3.5%;
+    $leftSpacing: 2em;
     $mainWidth: 65%;
 
     .Interstitial {

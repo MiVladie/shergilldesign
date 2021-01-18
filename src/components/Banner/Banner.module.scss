@@ -1,8 +1,10 @@
 $blue: #002BD1;
+$navigationHeight: 5em;
+$headerHeight: 2.25em;
 
 .Banner {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - #{ $headerHeight } + 1px);
     
     display: flex;
     justify-content: center;
@@ -11,6 +13,8 @@ $blue: #002BD1;
     flex-flow: column;
 
     position: relative;
+
+    margin-top: calc(-#{ $navigationHeight } - 1px);
     
     .Background {
         position: absolute;
@@ -43,6 +47,9 @@ $blue: #002BD1;
 
         .Meta {
             font-size: 1.5em;
+            
+            opacity: 0;
+            animation: fadeIn 0.75s 0s ease-out forwards;
         }
         
         .Main {
@@ -53,11 +60,17 @@ $blue: #002BD1;
             margin: 0.25em 0;
 
             text-transform: uppercase;
+            
+            opacity: 0;
+            animation: fadeIn 0.75s 0.25s ease-out forwards;
         }
 
         .Description {
             font-size: 1em;
             line-height: 1.5em;
+            
+            opacity: 0;
+            animation: fadeIn 0.75s 0.5s ease-out forwards;
         }
     }
 
@@ -70,6 +83,9 @@ $blue: #002BD1;
 
         .Request {
             display: none;
+            
+            opacity: 0;
+            animation: fadeIn 0.75s 0.75s ease-out forwards;
         }
 
         .Scroll {
@@ -79,19 +95,52 @@ $blue: #002BD1;
             background: none;
             border: none;
             
-            width: 2.5em;
+            width: 3em;
             height: 2em;
+            
+            transition: all 0.25s;
+            
+            &:hover {
+                transform: translateY(4px);
+                opacity: 0.75;
+            }
 
-            background-image: url('../../assets/icons/scroll.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            .Arrow {
+                width: 100%;
+                height: 100%;
+                    
+                background-image: url('../../assets/icons/scroll.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                transition: all 0.25s;
+                
+                opacity: 0;
+                animation: fadeIn 0.75s 0.75s ease-out forwards;
+            }
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            transform: translateY(0.5em);
+            opacity: 0;
+        }
+
+        to { 
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 }
 
 @media (min-width: 720px) {
-    .Banner {        
+    $navigationHeight: 6em;
+
+    .Banner {  
+        margin-top: calc(-#{ $navigationHeight } - 1px);
+
         .Promo {
             width: 80%;
             max-width: calc(850px * 0.8);
@@ -144,7 +193,10 @@ $blue: #002BD1;
 }
 
 @media (min-width: 1025px) {
+    $navigationHeight: 5.5em;
+    
     .Banner {
+        margin-top: calc(-#{ $navigationHeight } - 1px);
         align-items: flex-start;
 
         .Promo {
@@ -162,15 +214,8 @@ $blue: #002BD1;
             }
 
             .Description {
-                font-size: 1.15em;
+                font-size: 1.25em;
                 width: 70%;
-            }
-        }
-
-        .Extra {
-            width: 100%;
-
-            .Request {
             }
         }
     }

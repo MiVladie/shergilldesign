@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
 import marker from '../../assets/icons/address.png';
 import phone from '../../assets/icons/phone.png';
 import mail from '../../assets/icons/email.png';
 
-import classes from './Footer.module.css';
+import classes from './Footer.module.scss';
 
 const footer = () => {
     return (
@@ -15,17 +13,16 @@ const footer = () => {
                 <div className = { classes.About }>
                     <h1 className = { classes.Name }>About us</h1>
                     <div className = { classes.Line } />
-                    <p className = { classes.Description }>Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Similique Dolorem Quisquam Laudantium, Incidunt Id Laborum, Tempora Aliquid Labore Minus. Nemo Maxime, Veniam!</p>
+                    <p className = { classes.Description }>We have been investing in buy-to-let properties over 20 years if you are interested in buy-to-let investment! We have our team of builders to carry out on any projects.</p>
                 </div>
 
                 <div className = { classes.Links }>
                     <h1 className = { classes.Name }>Links</h1>
                     <div className = { classes.Line } />
                     <ul className = { classes.Pages }>
-                        <li className = { classes.Page }><Link to = '/about'>About</Link></li>
-                        <li className = { classes.Page }><Link to = '/process'>Process</Link></li>
-                        <li className = { classes.Page }><Link to = '/services'>Services</Link></li>
-                        <li className = { classes.Page }><Link to = '/contact'>Contact</Link></li>
+                        <li className = { classes.Page }><a href = '/#about'>About</a></li>
+                        <li className = { classes.Page }><a href = '/#services'>Services</a></li>
+                        <li className = { classes.Page }><a href = '/#contact'>Contact</a></li>
                     </ul>
                 </div>
 

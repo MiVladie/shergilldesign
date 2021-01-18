@@ -10,8 +10,9 @@ import ScrollToTop from './util/ScrollToTop';
 ReactDOM.render(
   <React.StrictMode>
     <Router basename = { process.env.PUBLIC_URL }>
-      <ScrollToTop />
-      <App />
+      <ScrollToTop>
+        <App />
+      </ScrollToTop>
     </Router>
   </React.StrictMode>
     ,

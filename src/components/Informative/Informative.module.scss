@@ -1,0 +1,156 @@
+$black: #2E2E2E;
+
+$leftSpacing: 5%;
+$mainWidth: 95%;
+
+.Informative {
+    // Non-Styling
+
+    width: 100%;
+
+    .Image {
+        height: 30vh;
+        
+        // Non-Styling
+
+        width: 100%;
+
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .Content {
+        padding: 2em 0;
+    
+        // Non-Styling
+
+        width: 100%;
+
+        .Wrapper {
+            width: calc(#{ $mainWidth } - #{ $leftSpacing });            
+            margin-left: $leftSpacing;
+                    
+            z-index: 100;
+            
+            .Meta {
+                text-transform: uppercase;
+                color: $black;
+                
+                // Non-styling
+                
+                font-size: 1em;
+                margin-bottom: 0.5em;
+            }
+    
+            .Main {
+                text-transform: uppercase;
+                color: $black;
+                
+                // Non-styling
+                
+                font-size: 2em;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+    
+            .Line {
+                width: 3em;
+                background-color: $black;
+                
+                // Non-styling
+                
+                height: 2px;
+            }
+    
+            .Description {
+                color: $black;
+    
+                // Non-styling
+                
+                font-weight: 400;
+                line-height: 1.5em;
+                margin-top: 20px;
+            }
+        }
+    
+        .Link {
+            width: 8.5em;
+            line-height: 3em;
+    
+            border: 1.5px solid $black;
+            color: $black;
+            
+            // Non-styling
+    
+            display: block;
+    
+            text-decoration: none;
+            text-align: center;
+    
+            margin: 2em 0 0 $leftSpacing;
+    
+            z-index: 100;
+            transition: all 0.15s;
+            outline: none;
+    
+            &:hover {
+                color: white;
+                background-color: $black;
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) {
+    $mainWidth: 95%;
+    $minHeight: 30vh;
+
+    $verticalSpacing: 2em;
+    $leftSpacing: 2em;
+
+    .Informative {
+        display: flex;
+        position: relative;
+
+        .Image {
+            width: 50%;
+            height: 100%;
+            min-height: $minHeight;
+            
+            position: absolute;
+        }
+
+        .Content {
+            min-height: $minHeight;
+            width: 50%;
+
+            padding: 0;
+            margin: $verticalSpacing 0;
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .Wrapper {
+                width: calc(#{ $mainWidth } - #{ $leftSpacing });
+                margin-left: $leftSpacing;
+            }
+
+            .Link {  
+                margin-left: $leftSpacing;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1025px) {
+    $minHeight: 60vh;
+
+    .Informative {
+        .Content {
+            min-height: $minHeight;
+        }
+    }
+}

@@ -29,7 +29,12 @@ $red: #FF5959;
 
     .Deal {
         width: 90%;
+        min-width: 300px;
+        max-width: 500px;
+
         height: 75%;
+        min-height: 500px;
+        max-height: 700px;
 
         border: 5px solid white;
         background-color: white;

@@ -1,81 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import Input from '../UI/Input/Input';
+import Input from '../Form/Input/Input';
+import Spinner from '../UI/Spinner/Spinner';
 
-import classes from './Form.module.css';
+import { isFormValid } from '../../util/formValidation';
 
-const Form = ({ data, submit, error }) => {
-    const [hasErrors, setHasErrors] = useState(true);
-    const [result, setResult] = useState({});
+import classes from './Form.module.scss';
 
-    const isValidEmail = (email) => {
-        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
+const Form = ({ data, centered, button, onSubmit, inputs, response, loading }) => {
+    const [values, setValues] = useState();
+    const [result, setResult] = useState();
 
-    const inputChangeHandler = (value, field) => {
-        let res = { ...result, [field.name]: value };
+    useEffect(() => {
+        setValues(inputs);
+        setResult(response);
+    }, [inputs, response]);
 
-        setResult(res);
-        
-        for(let section of data) {
-            for(let field of section.fields) {
-                if(field.required && (res[field.name] == null || res[field.name] === '')) {
-                    setHasErrors(true);
-                    return;
-                }
+    const submitHandler = () => {
+        let err = isFormValid(data, values);
 
-                if(field.required && field.type === 'email' && !isValidEmail(res[field.name])) {
-                    setHasErrors(true);
-                    return;
-                }
-            }
+        if(err == null) {            
+            values.time = new Date().getDate() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getFullYear() + ' ' + new Date().getHours() + ':' + new Date().getMinutes();
+            
+            for(let input in values) 
+                values[input] = values[input] === '' ? null : values[input];
+
+            onSubmit(values);
+        } else {
+            setResult(err);
         }
-        
-        setHasErrors(false);
-    }
-
-    const submitButtonHandler = (event) => {
-        event.preventDefault();
-        submit.onSubmit(result);
-    }
-
-    let sections = data.map(section => {
-        return (
-            <div className = { classes.Section } key = { section.title }>
-                <h3 className = { classes.Title }>{ section.title }</h3>
-                { section.fields.map(field => {
-                    let component = <Input
-                        onChange = { (value) => inputChangeHandler(value, field) }
-                        value = { result[field.name] == null ? '' : result[field.name] } 
-                        type = { field.type }
-                        placeholder = { field.placeholder + (field.required ? '*' : '') } 
-                        required = { field.required }
-                        key = { field.name } />;
-
-                    return component;
-                }) }
-            </div>
-        );
-    });
-
-    let button = <button
-                type = 'submit'
-                disabled = { hasErrors }
-                className = { classes.Button }
-                onClick = { submitButtonHandler }>
-                { submit.name }
-            </button>;
-
-    let errorMessage = error && <p className = { classes.SubmitError }>{ error }</p>;
+    };
 
     return (
-        <form className = { classes.Form }>
-            { sections }
-            { button }
-            { errorMessage }
-        </form>
-    );
-}
+        <div className = { classes.Form }>
+            { loading && <div className = { classes.Modal }><Spinner /></div> }
+
+            <form className = { classes.Area }>
+                { data.map(input =>
+                    <Input
+                        type = { input.type }
+                        placeholder = { input.placeholder }
+                        required = { input.required }
+                        value = { values != null && values[input.name] != null ? values[input.name] : '' }
+                        onChange = { (value) => setValues({...values, [input.name]: value }) }
+                        key = { input.name } />) }
+            </form>
+
+            { result && <p className = { classes.Result }>{ result }</p> }
+
+            <button
+                className = { classes.Submit }
+                style = { centered && { margin: '0 auto' } }
+                onClick = { submitHandler }
+                disabled = { loading }>
+                { button }
+            </button>
+        </div>
+    )
+};
 
 export default Form;

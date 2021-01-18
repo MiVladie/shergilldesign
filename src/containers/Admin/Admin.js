@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Banner from '../../components/Banner/Banner';
+import Section from '../../components/Section/Section'; 
 import Auth from '../../components/Admin/Auth/Auth';
 import Inbox from '../../components/Admin/Inbox/Inbox';
 
@@ -33,14 +34,15 @@ const Admin = () => {
     return (
         <React.Fragment>            
             <Banner 
+                image = { bannerImage }
                 meta = 'Restricted' 
                 main = 'Admin page' 
                 description = 'This page is for the administator only.'
-                background = { bannerImage } />
+                scrollTo = 'intro' />
 
-            { loggedIn ? <Inbox /> : <Auth login = { checkingLogin } /> }
-
-            <div style = {{ paddingBottom: '2em' }} />
+            <Section id = 'intro'>
+                { loggedIn ? <Inbox /> : <Auth login = { checkingLogin } /> }
+            </Section>
         </React.Fragment>
     );}
 
