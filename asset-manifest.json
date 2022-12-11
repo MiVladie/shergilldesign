@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/shergilldesign/static/css/main.bf1f9695.chunk.css",
+    "main.js": "/shergilldesign/static/js/main.950f74a0.chunk.js",
+    "main.js.map": "/shergilldesign/static/js/main.950f74a0.chunk.js.map",
+    "runtime-main.js": "/shergilldesign/static/js/runtime-main.f4a1381c.js",
+    "runtime-main.js.map": "/shergilldesign/static/js/runtime-main.f4a1381c.js.map",
+    "static/js/2.a588199f.chunk.js": "/shergilldesign/static/js/2.a588199f.chunk.js",
+    "static/js/2.a588199f.chunk.js.map": "/shergilldesign/static/js/2.a588199f.chunk.js.map",
+    "index.html": "/shergilldesign/index.html",
+    "static/css/main.bf1f9695.chunk.css.map": "/shergilldesign/static/css/main.bf1f9695.chunk.css.map",
+    "static/js/2.a588199f.chunk.js.LICENSE.txt": "/shergilldesign/static/js/2.a588199f.chunk.js.LICENSE.txt",
+    "static/media/logo.f40915ea.png": "/shergilldesign/static/media/logo.f40915ea.png",
+    "static/media/photo_2.0c19f62d.jpg": "/shergilldesign/static/media/photo_2.0c19f62d.jpg",
+    "static/media/template_01.50ca6bcb.jpg": "/shergilldesign/static/media/template_01.50ca6bcb.jpg",
+    "static/media/template_02.a624ac19.jpg": "/shergilldesign/static/media/template_02.a624ac19.jpg",
+    "static/media/template_03.e7e9d7b0.jpg": "/shergilldesign/static/media/template_03.e7e9d7b0.jpg",
+    "static/media/template_04.54aa0df8.jpg": "/shergilldesign/static/media/template_04.54aa0df8.jpg",
+    "static/media/template_05.2d49baef.jpg": "/shergilldesign/static/media/template_05.2d49baef.jpg",
+    "static/media/template_07.53813199.jpg": "/shergilldesign/static/media/template_07.53813199.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4a1381c.js",
+    "static/js/2.a588199f.chunk.js",
+    "static/css/main.bf1f9695.chunk.css",
+    "static/js/main.950f74a0.chunk.js"
+  ]
+}
