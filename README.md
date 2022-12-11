@@ -3,21 +3,21 @@
 Shergill Design is a web application for an Architecture Services company based in London, UK.
 
 Website preview:
-https://shergilldesign.co.uk/
+https://mivladie.github.io/shergilldesign/
 
 # :memo: Table of Contents
 
-* [:memo: Table of Contents](#memo-table-of-contents)
-* [:rocket: Quick Start](#rocket-quick-start)
-	* [Step 1: Installing the dependencies](#step-1-installing-the-dependencies)
-	* [Step 2: Launching the server](#step-2-launching-the-server)
-* [:desktop_computer: Installation](#desktop_computer-installation)
-	* [NodeJS](#nodejs)
-* [:keyboard: Available Scripts](#keyboard-available-scripts)
-* [:green_book: Learn More](#green_book-learn-more)
-	* [ReactJS](#reactjs)
-	* [React Router](#react-router)
-	* [Sass](#sass)
+-   [:memo: Table of Contents](#memo-table-of-contents)
+-   [:rocket: Quick Start](#rocket-quick-start)
+    -   [Step 1: Installing the dependencies](#step-1-installing-the-dependencies)
+    -   [Step 2: Launching the server](#step-2-launching-the-server)
+-   [:desktop_computer: Installation](#desktop_computer-installation)
+    -   [NodeJS](#nodejs)
+-   [:keyboard: Available Scripts](#keyboard-available-scripts)
+-   [:green_book: Learn More](#green_book-learn-more)
+    -   [ReactJS](#reactjs)
+    -   [React Router](#react-router)
+    -   [Sass](#sass)
 
 # :rocket: Quick Start
 
@@ -45,7 +45,7 @@ In order to run the server, you must have installed all of the necessary softwar
 
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-* [Download](https://nodejs.org/en/)
+-   [Download](https://nodejs.org/en/)
 
 # :keyboard: Available Scripts
 
@@ -71,16 +71,16 @@ References to the packages used in the project.
 
 React is a JavaScript library for building user interfaces.
 
-* [Getting Started](https://reactjs.org/docs/getting-started.html)
+-   [Getting Started](https://reactjs.org/docs/getting-started.html)
 
 ## React Router
 
 React Router is a collection of navigational components that compose declaratively with your application.
 
-* [Quick Start](https://reactrouter.com/web/guides/quick-start)
+-   [Quick Start](https://reactrouter.com/web/guides/quick-start)
 
 ## Sass
 
 Sass is a preprocessor scripting language that is interpreted or compiled into CSS.
 
-* [Documentation](https://sass-lang.com/documentation)
+-   [Documentation](https://sass-lang.com/documentation)
