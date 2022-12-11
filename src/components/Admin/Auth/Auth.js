@@ -1,58 +1,56 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+
+import { API_URL } from '../../../config/constants';
 
 import Introduction from '../../Introduction/Introduction';
 import Form from '../../Form/Form';
-import { backendDomain } from '../../../config/constants';
+
+import axios from 'axios';
 
 const Auth = ({ login }) => {
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState();  
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState();
 
-    const onLoginHandler = (values) => {
-        setLoading(true);
+	const onLoginHandler = async (credentials) => {
+		setLoading(true);
 
-        let url = backendDomain + 'admin/shergilldesign';
-        let credentials = { credentials: values };
+		try {
+			const { data } = await axios.post(API_URL + '/admin/shergilldesign', { credentials });
 
-        axios.post(url, credentials)
-            .then(response => {
-                localStorage.setItem('token', response.data.token);
-                localStorage.setItem('expirationDate', response.data.expirationDate);
-                
-                setLoading(false);
-                setError(null);
-                
-                login();
-            })
-            .catch(err => {
-                setLoading(false);
-                let errorMessage = err.response && err.response.data.message;
-                console.log(errorMessage);
+			localStorage.setItem('token', data.token);
+			localStorage.setItem('expirationDate', data.expirationDate);
 
-                setError(errorMessage);
-            });
-    }
+			setLoading(false);
+			setError(null);
 
-    return (
-    	<React.Fragment>
-            <Introduction
-                meta = 'Restricted access'
-                main = 'Wow..this page is restriced!' />
+			login();
+		} catch (error) {
+			let errorMessage = error.response?.data?.message || 'Oops, something went wrong!';
 
-            <div style = {{ width: '90%', maxWidth: '500px', margin: '4em auto' }}>
-                <Form
-                    data = {[
-                        { name: 'email', placeholder: 'Your email', type: 'email', required: true },
-                        { name: 'password', placeholder: 'Your password', type: 'password', required: true }
-                    ]}
-                    button = 'Sign in' centered
-                    onSubmit = { onLoginHandler }
-                    response = { error }
-                    loading = { loading } />
-            </div>                
-        </React.Fragment>
-    );
-}
+			setError(errorMessage);
+			setLoading(false);
+		}
+	};
+
+	return (
+		<React.Fragment>
+			<Introduction meta='Restricted access' main='Wow..this page is restriced!' />
+
+			<div style={{ width: '90%', maxWidth: '500px', margin: '4em auto' }}>
+				<Form
+					data={[
+						{ name: 'email', placeholder: 'Your email', type: 'email', required: true },
+						{ name: 'password', placeholder: 'Your password', type: 'password', required: true }
+					]}
+					button='Sign in'
+					centered
+					onSubmit={onLoginHandler}
+					response={error}
+					loading={loading}
+				/>
+			</div>
+		</React.Fragment>
+	);
+};
 
 export default Auth;
